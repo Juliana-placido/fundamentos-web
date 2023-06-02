@@ -1,10 +1,17 @@
 function startJourney() {
-    alert('Prepare-se para uma aventura mágica!');
+    const currentURL = window.location.href;
+    const searchTerm = "harry_potter";
+    const index = currentURL.indexOf(searchTerm);
 
+    if (index !== -1) {
+      alert("Esta página está relacionada ao Harry Potter!");
+    } else {
+      alert("Esta página não está relacionada ao Harry Potter.");
+    }
   }
 
-  // Obtendo referência ao botão pelo ID
+
   const button = document.getElementById('startButton');
 
-  // Adicionando um listener de evento para o clique no botão
+
   button.addEventListener('click', startJourney);
